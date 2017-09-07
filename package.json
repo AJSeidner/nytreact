@@ -1,0 +1,30 @@
+{
+  "name": "nytreact",
+  "version": "1.0.0",
+  "description": "mongodb/mongoose/express/handlebars/react/node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AJSeidner/nytreact.git"
+  },
+  "author": "A.J Seidner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AJSeidner/nytreact/issues"
+  },
+  "homepage": "https://github.com/AJSeidner/nytreact#readme",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "body-parser": "^1.17.2",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.15.4",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^4.11.10",
+    "morgan": "^1.8.2",
+    "react": "^15.6.1",
+    "webpack": "^3.5.6"
+  }
+}
