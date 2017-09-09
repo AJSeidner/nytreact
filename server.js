@@ -1,29 +1,28 @@
-
+//here are requirements
 var express = require('express');
+//this is probably not needed
 var expressHandlebars = require('express-handlebars');
+//this is probably not needed
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var logger = require('morgan');
-
-
+//we need our mongoose Article file to send info to the mongoDB
 var Article = require("./models/Article.js");
-
-
+//oh hai express
 var app = express();
 var PORT = process.env.PORT || 3000;
-
+//we probably don't need body parser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.text());
 app.use(bodyParser.json({type: "application/vnd.api+json"}));
-
+//for allowing us to serve files in that are static in public dir
 app.use(express.static("./public"));
 
 
 //creates pathway to create and modify DB
 mongoose.connect('mongodb://localhost/nytreact');
-
-
+//for making language easier below
 var db = mongoose.connection;
 //to check if connection is successful
 db.on('error', function (err){
@@ -53,11 +52,7 @@ app.get('/api/saved', function(req, res){
 	});
 //function for posting saved articles
 app.post('/api/saved', function(req, res){
-  //var newArticle = new Article(req.body);
 
-  //var title = req.body.title;
-  //var date = req.body.date;
-  //var url = req.body.url;
 
 //This is where data is sent to Mongo DB
 //Article is equivalent to Table
