@@ -21,7 +21,10 @@ app.use(express.static("./public"));
 
 
 //creates pathway to create and modify DB
-mongoose.connect('mongodb://localhost/nytreact');
+
+//MONGODB_URI: mongodb://heroku_q68w16nt:4cf99954jq3khi6kgvbjqs6u62@ds129024.mlab.com:29024/heroku_q68w16nt
+//local connect: mongodb://localhost/nytreact
+mongoose.connect('mongodb://heroku_q68w16nt:4cf99954jq3khi6kgvbjqs6u62@ds129024.mlab.com:29024/heroku_q68w16nt');
 //for making language easier below
 var db = mongoose.connection;
 //to check if connection is successful
